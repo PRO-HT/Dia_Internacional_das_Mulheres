@@ -832,4 +832,69 @@ footer {
   .mulher-card img { height: 220px; }
 
   .redes-grid { grid-template-columns: 1fr; }
+
+}
+
+/* ─── RODAPÉ ─── */
+footer {
+  padding: 48px 20px 36px;
+  border-top: 1px solid rgba(128, 0, 128, 0.12);
+  margin-top: 60px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-copy {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--texto-medio);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.footer-assinatura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(192, 57, 138, 0.22);
+  box-shadow: 0 4px 20px rgba(128, 0, 128, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.footer-assinatura:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(128, 0, 128, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.footer-feito {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--texto-medio);
+  opacity: 0.8;
+}
+
+.footer-handle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--roxo-escuro), var(--rosa-vivo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.02em;
 }

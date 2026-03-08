@@ -259,7 +259,6 @@ h3 small {
   cursor: grabbing;
 }
 
-/* Carrossel 3 slides — imagens horizontais */
 .carousel-slide {
   display: flex;
   width: 300%;
@@ -268,14 +267,13 @@ h3 small {
 
 .carousel-slide img {
   width: 33.33%;
-  aspect-ratio: 4 / 3;    /* paisagem — para fotos horizontais */
-  object-fit: cover;       /* preenche sem distorcer */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   object-position: center;
   display: block;
   flex-shrink: 0;
 }
 
-/* Carrossel 2 slides — imagens verticais (ONU/SaferNet) */
 .carousel-slide-2 {
   width: 200%;
   animation: slideAnimation2 8s infinite ease-in-out;
@@ -283,7 +281,7 @@ h3 small {
 
 .carousel-slide-2 img {
   width: 50%;
-  aspect-ratio: 3 / 4;    /* retrato — para imagens verticais */
+  aspect-ratio: 3 / 4;
   object-fit: contain;
   background: transparent;
   max-height: 420px;
@@ -313,7 +311,6 @@ h3 small {
 }
 
 @keyframes slideAnimation3 {
-  /* controlado pelo JS — mantido para fallback */
   from { transform: translateX(0); }
   to   { transform: translateX(0); }
 }
@@ -676,7 +673,6 @@ h3 small {
   margin-top: 8px;
 }
 
-/* Card de rede/perfil */
 .rede-card {
   display: flex;
   flex-direction: column;
@@ -708,7 +704,6 @@ h3 small {
   box-shadow: var(--sombra-forte);
 }
 
-/* ícone / avatar emoji */
 .rede-avatar {
   font-size: 1.8rem;
   line-height: 1;
@@ -752,7 +747,6 @@ h3 small {
   margin-top: 6px;
 }
 
-/* Tag de categoria */
 .rede-tag {
   align-self: flex-start;
   font-family: 'DM Sans', sans-serif;
@@ -769,13 +763,66 @@ h3 small {
 
 /* ─── RODAPÉ ─── */
 footer {
-  text-align: center;
-  padding: 36px 20px;
+  padding: 48px 20px 40px;
+  border-top: 1px solid rgba(128, 0, 128, 0.12);
+  margin-top: 60px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-copy {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   color: var(--texto-medio);
-  border-top: 1px solid rgba(128, 0, 128, 0.1);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.footer-assinatura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(192, 57, 138, 0.2);
+  box-shadow: 0 4px 20px rgba(128, 0, 128, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.footer-assinatura:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 36px rgba(128, 0, 128, 0.18);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.footer-feito {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--texto-medio);
+  opacity: 0.75;
+}
+
+.footer-handle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--roxo-escuro), var(--rosa-vivo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.02em;
 }
 
 /* ─── RESPONSIVIDADE MOBILE ─── */
@@ -832,69 +879,4 @@ footer {
   .mulher-card img { height: 220px; }
 
   .redes-grid { grid-template-columns: 1fr; }
-
-}
-
-/* ─── RODAPÉ ─── */
-footer {
-  padding: 48px 20px 36px;
-  border-top: 1px solid rgba(128, 0, 128, 0.12);
-  margin-top: 60px;
-}
-
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-
-.footer-copy {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  color: var(--texto-medio);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-
-.footer-assinatura {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  text-decoration: none;
-  padding: 14px 32px;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(192, 57, 138, 0.22);
-  box-shadow: 0 4px 20px rgba(128, 0, 128, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.footer-assinatura:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(128, 0, 128, 0.2);
-  background: rgba(255, 255, 255, 0.85);
-}
-
-.footer-feito {
-  font-family: 'Lora', serif;
-  font-style: italic;
-  font-size: 0.75rem;
-  color: var(--texto-medio);
-  opacity: 0.8;
-}
-
-.footer-handle {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, var(--roxo-escuro), var(--rosa-vivo));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 0.02em;
 }
